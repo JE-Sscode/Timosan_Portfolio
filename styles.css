@@ -10,14 +10,43 @@
 
 *{box-sizing:border-box}
 html,body{height:100%}
-body{
-    margin:0;
-    font-family:Segoe UI, Roboto, Arial, sans-serif;
-    background:linear-gradient(180deg, var(--bg) 0%, #018790 100%);
-    color:var(--text);
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    line-height:1.5;
+body {
+    margin: 0;
+    font-family: Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.5;
+
+    /* Light / God Rays background */
+    background:
+        radial-gradient(
+            circle at 50% -20%,
+            rgba(255, 255, 255, 0.18),
+            rgba(255, 255, 255, 0.05) 35%,
+            transparent 60%
+        ),
+        radial-gradient(
+            circle at 30% -25%,
+            rgba(120, 200, 255, 0.15),
+            transparent 55%
+        ),
+        radial-gradient(
+            circle at 70% -30%,
+            rgba(160, 255, 240, 0.12),
+            transparent 60%
+        ),
+        linear-gradient(
+            180deg,
+            #003b44 0%,
+            #005f66 50%,
+            #004b52 100%
+        );
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container{width:calc(100% - 2rem);
@@ -136,3 +165,4 @@ body{
 /* Small utilities */
 .muted{color:var(--muted)}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
